@@ -1,0 +1,300 @@
+/*
+1em = 16px
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #7e40f6, #508bfc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.btn, .form-control {
+  font-size: 1.6rem;
+}
+
+.todo {
+  padding: 30px 15px;
+  background: rgba(24, 24, 16, 0.2);
+  border-radius: 10px;
+  min-width: 1000px;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo {
+    min-width: 30rem;
+  }
+}
+@media only screen and (min-width: 37.6em) and (max-width: 56.2em) {
+  .todo {
+    min-width: 70rem;
+  }
+}
+.todo__content button {
+  font-size: 1.6rem;
+}
+.todo__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo__header {
+    flex-direction: column;
+  }
+}
+.todo__title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo__title {
+    margin-bottom: 1.3rem;
+  }
+}
+.todo__table {
+  border-collapse: collapse;
+}
+.todo__table tbody {
+  border-top: 1px solid #fff !important;
+}
+.todo__table-tr {
+  text-align: center;
+  color: #fff;
+}
+.todo__table-tr--border {
+  border-top: 1px solid #fff;
+}
+.todo__table-tr.done {
+  background-color: #198754;
+}
+.todo__table-tr.done .todo__user-name,
+.todo__table-tr.done .todo__desc,
+.todo__table-tr.done .todo__priority {
+  text-decoration: line-through;
+}
+.todo__table-tr th, .todo__table-tr td {
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+.todo__table-tr th button, .todo__table-tr td button {
+  font-size: 1.6rem;
+}
+.todo__table-flex {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo__table-flex {
+    flex-direction: column;
+  }
+}
+.todo__priority {
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 5px;
+  padding: 4px;
+}
+.todo__priority--danger {
+  background-color: #dc3545;
+}
+.todo__priority--warning {
+  background-color: #cda838;
+}
+.todo__priority--success {
+  background-color: #198754;
+}
+.todo__btn {
+  position: relative;
+}
+.todo__btn:hover .btn-hover-text {
+  opacity: 1;
+  visibility: visible;
+}
+.todo__btn .btn-hover-text {
+  position: absolute;
+  bottom: 100%;
+  background-color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  right: 0;
+  padding: 4px 5px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo__btn .btn-hover-text {
+    display: none;
+  }
+}
+.todo__desc {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  text-align: center;
+}
+.todo__desc.show-desc {
+  cursor: pointer;
+}
+.todo__desc.active {
+  border-bottom: 1px solid #fff;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.todo__desc:focus {
+  outline: 0;
+}
+.todo__user-img {
+  width: 45px;
+}
+@media only screen and (max-width: 37.5em) {
+  .todo__user-name {
+    margin-top: 1.5rem;
+    color: #dc3545;
+  }
+}
+
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.568);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__container {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  left: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: left 0.4s;
+}
+.popup__container.active {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+.popup__head {
+  font-size: 17px;
+  font-weight: 600;
+}
+.popup__close {
+  cursor: pointer;
+}
+.popup__close i {
+  font-size: 17px;
+}
+.popup__body {
+  padding: 30px;
+}
+.popup__form-item {
+  margin-bottom: 15px;
+}
+.popup__form-item select {
+  appearance: auto;
+}
+.popup__form-item textarea {
+  height: 100px;
+}
+.popup__form-item .form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #ced4da;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
