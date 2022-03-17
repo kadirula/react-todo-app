@@ -12,3 +12,9 @@ Projeyi canlıda incelemek için;
 
 [https://kadirula-todo-app.netlify.app/](https://kadirula-todo-app.netlify.app/)
 
+## Projeye dair ekran görüntüleri
+
+![todo listesi ekran görüntüsü](https://github.com/kadirula/react-todo-app/blob/main/todo-list.png)
+<br/>
+![todo popup ekran görüntüsü](https://github.com/kadirula/react-todo-app/blob/main/todo-popup.png)
+
