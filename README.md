@@ -15,6 +15,6 @@ Projeyi canlıda incelemek için;
 ## Projeye dair ekran görüntüleri
 
 ![todo listesi ekran görüntüsü](https://github.com/kadirula/react-todo-app/blob/main/todo-list.png)
-<br/>
+## <br/>
 ![todo popup ekran görüntüsü](https://github.com/kadirula/react-todo-app/blob/main/todo-popup.png)
 
