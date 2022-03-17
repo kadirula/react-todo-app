@@ -1,6 +1,6 @@
 # React ile To Do List Uygulaması
 
-Eğer projeyi indirdiyseniz terminalden paketleri indirmeyi unutmayınız:
+Eğer projeyi indirdiyseniz terminalden paketleri yüklemeyi unutmayınız:
 
 ### `npm install`
 
